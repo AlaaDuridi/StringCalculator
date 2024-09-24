@@ -70,5 +70,8 @@ describe('Calculator', () => {
     it('should throw an error for invalid operator', () => {
         expect(() => calc(2, '&', 3)).toThrow('Invalid operator');
     });
+    it('should handle single number input', () => {
+        expect(calc(42)).toBe(42);
+    });
 
 });
