@@ -81,6 +81,10 @@ describe('Calculator', () => {
         expect(calc(2, '*', 1001, '+', 5)).toBe(7);
     })
 
+    it('should check parentheses with unknown number of operations', () => {
+        expect(calc('(', 2, '+', 1001, ')', '*', 3,'%','(',4,'+',7,')')).toBe(6);
+    });
+
 
 
 });
