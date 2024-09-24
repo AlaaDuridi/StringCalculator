@@ -60,5 +60,8 @@ describe('Calculator', () => {
         expect(() => calc('(', 2, '*', '(', 3, '+', 4, ')',')',')')).toThrow('Invalid expression: unmatched closing parenthesis');
     });
 
+    it('Should throw an error when invalid input type with long operation', () => {
+        expect(() => calc('(', 2, '*', '(', 3, '+', 4, ')',')','+','-')).toThrow('Invalid input type');
+    });
 
 });
