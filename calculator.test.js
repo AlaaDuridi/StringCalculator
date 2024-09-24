@@ -40,11 +40,16 @@ describe('Calculator', () => {
     });
 
     it('should throw an error for invalid input types', () => {
+        expect(() => calc('#', '+', 3)).toThrow('Invalid input type');
         expect(() => calc('2', '+', 3)).toThrow('Invalid input type');
     });
 
     it('should follow the correct order of operations', () => {
         expect(calc(2, '^', 3, '*', 4)).toBe(32);
+    });
+
+    it('should throw an error for empty expression', () => {
+        expect(() => calc()).toThrow('Empty expression');
     });
 
 });
