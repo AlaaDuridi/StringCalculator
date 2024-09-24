@@ -10,4 +10,7 @@ describe('Calculator', () => {
     it('should return the correct product of two numbers', () => {
         expect(calc(4, '*', 6)).toBe(24);
     });
+    it('should return the correct quotient of two numbers', () => {
+        expect(calc(10, '/', 2)).toBe(5);
+    });
 });

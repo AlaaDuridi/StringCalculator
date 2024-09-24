@@ -6,6 +6,8 @@ function calc (a, operator, b){
             return a-b;
         case '*':
             return a*b;
+        case '/':
+            return a/b;
     }
 }
 module.exports=calc;
