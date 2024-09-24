@@ -73,5 +73,9 @@ describe('Calculator', () => {
     it('should handle single number input', () => {
         expect(calc(42)).toBe(42);
     });
+    it('should ignore numbers bigger than 1000',()=>{
+        expect(calc(1001,'+',1)).toBe(1);
+        expect(calc(1001,'+',10000)).toBe(0);
+    })
 
 });
