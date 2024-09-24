@@ -52,4 +52,13 @@ describe('Calculator', () => {
         expect(() => calc()).toThrow('Empty expression');
     });
 
+    it('Should throw an error when bad () closing', () => {
+        expect(() => calc('(', 2, '*', '(', 3, '+', 4, ')')).toThrow('Invalid expression: unmatched opening parenthesis');
+    });
+
+    it('Should throw an error when bad () closing', () => {
+        expect(() => calc('(', 2, '*', '(', 3, '+', 4, ')',')',')')).toThrow('Invalid expression: unmatched closing parenthesis');
+    });
+
+
 });
