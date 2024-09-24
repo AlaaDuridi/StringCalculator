@@ -1,0 +1,14 @@
+{
+  "name": "string-calculator",
+  "version": "1.0.0",
+  "description": "A simple yet comprehensive string calculator implemened with TTD. it includes a calculator function capable of handling basic arithmetic operations, validating inputs, and managing edge cases such as division by zero.",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --coverage"
+  },
+  "author": "Alaa Duridi",
+  "license": "ISC",
+  "dependencies": {
+    "jest": "^29.7.0"
+  }
+}
