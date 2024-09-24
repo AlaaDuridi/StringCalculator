@@ -13,4 +13,7 @@ describe('Calculator', () => {
     it('should return the correct quotient of two numbers', () => {
         expect(calc(10, '/', 2)).toBe(5);
     });
+    it('should throw an error when dividing by zero', () => {
+        expect(() => calc(6, '/', 0)).toThrow('Division by zero');
+    });
 });
