@@ -7,4 +7,7 @@ describe('Calculator', () => {
     it('Should return the correct difference of two numbers',()=>{
         expect(calc(5, '-', 2)).toBe(3);
     })
+    it('should return the correct product of two numbers', () => {
+        expect(calc(4, '*', 6)).toBe(24);
+    });
 });
