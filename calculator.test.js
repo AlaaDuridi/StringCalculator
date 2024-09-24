@@ -76,6 +76,11 @@ describe('Calculator', () => {
     it('should ignore numbers bigger than 1000',()=>{
         expect(calc(1001,'+',1)).toBe(1);
         expect(calc(1001,'+',10000)).toBe(0);
+        expect(calc(2, '+', 1001)).toBe(2);
+        expect(calc(1000, '+', 1001, '+', 5)).toBe(1005);
+        expect(calc(2, '*', 1001, '+', 5)).toBe(7);
     })
+
+
 
 });
