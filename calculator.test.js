@@ -64,4 +64,11 @@ describe('Calculator', () => {
         expect(() => calc('(', 2, '*', '(', 3, '+', 4, ')',')','+','-')).toThrow('Invalid input type');
     });
 
+    it('Should return the correct answer when including a power',()=>{
+        expect(calc(2, '^', 3,'+',20)).toBe(28);
+    });
+    it('should throw an error for invalid operator', () => {
+        expect(() => calc(2, '&', 3)).toThrow('Invalid operator');
+    });
+
 });
